@@ -1,0 +1,138 @@
+<a href="https://https://jity.super.site/ru/contacts" class="button" role="button" target="_blank" rel="noopener noreferrer">
+  <span class="status-dot"></span>
+  <span class="button-text-wrapper">
+    <span class="button-text available">ищу проекты</span>
+    <span class="button-text contact">написать мне</span>
+  </span>
+</a>
+
+<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+.button {
+  align-items: center;
+  appearance: none;
+  border-radius: 50px;
+  border: 2px solid #1FCA3E;
+  box-shadow: rgba(76, 175, 80, 0.2) 0 2px 4px,
+              rgba(76, 175, 80, 0.15) 0 7px 13px -3px,
+              rgba(128, 128, 128, 0.2) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #1BAF35;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Victor Mono", monospace;
+  height: 44px;
+  justify-content: flex-start;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 12px;
+  width: 180px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #1FCA3E;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.8;
+  }
+}
+
+.button-text-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Текстовые анимации медленнее */
+.available {
+  animation: fadeInOut 3s infinite ease-in-out;
+}
+
+.contact {
+  animation: fadeInOut 3s infinite ease-in-out;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hover — показываем только contact me */
+.button:hover .status-dot {
+  opacity: 0;
+  animation-play-state: paused;
+}
+
+.button:hover .available,
+.button:hover .contact {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+.button:hover .contact {
+  opacity: 1 !important;
+}
+
+.button:hover {
+  box-shadow: rgba(76, 175, 80, 0.3) 0 4px 8px,
+              rgba(76, 175, 80, 0.2) 0 7px 13px -3px,
+              rgba(128, 128, 128, 0.2) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: rgba(128, 128, 128, 0.2) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+</style>
